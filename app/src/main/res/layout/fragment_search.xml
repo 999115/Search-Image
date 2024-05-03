@@ -28,17 +28,19 @@
 
         <EditText
             android:id="@+id/et_search"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="검색어"
             app:layout_constraintBottom_toBottomOf="@+id/iv_search_ic"
             app:layout_constraintStart_toEndOf="@+id/iv_search_ic"
-            app:layout_constraintTop_toTopOf="@+id/iv_search_ic"/>
+            app:layout_constraintTop_toTopOf="@+id/iv_search_ic"
+            app:layout_constraintEnd_toStartOf="@+id/bt_search"/>
 
-        <ImageView
-            android:id="@+id/iv_search_bt"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="검색"
             app:layout_constraintBottom_toBottomOf="@+id/et_search"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/et_search"/>
@@ -49,6 +51,7 @@
         android:id="@+id/layout_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
